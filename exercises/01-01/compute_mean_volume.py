@@ -5,11 +5,11 @@ import matplotlib.pyplot as plt
 
 
 def get_mean_volume(symbol):
-    """Return the mean volume for stock indicated by symbol.
-    Note: Data for a stock is stored in file: data/<symbol>.csv
+    """Return the mean volume for asset indicated by symbol.
+    Note: Data for a asset is stored in file: data/<symbol>.csv
     """
     df = pd.read_csv("data/{}.csv".format(symbol))  # read in data
-    # Quiz: Compute and return the mean volume for this stock
+    # Quiz: Compute and return the mean volume for this asset
     return df["Volume"].mean()
 
 

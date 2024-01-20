@@ -1,4 +1,4 @@
-"""Plotting Stock Price Data"""
+"""Plotting Asset Price Data"""
 
 import pandas as pd
 import matplotlib.pyplot as plt
