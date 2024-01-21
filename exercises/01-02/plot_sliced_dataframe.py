@@ -11,11 +11,7 @@ root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 sys.path.append(root_dir)
 
 from utils.get_adj_close import get_adj_close
-
-
-def normalize_data(df):
-    """Normalize asset prices using the first row of the dataframe."""
-    return df / df.iloc[0, :]
+from utils.normalize_data import normalize_data
 
 
 def plot_selected(df, columns, start_index, end_index):
@@ -46,7 +42,7 @@ def test_run():
 
     print("Pre-Sliced Price Data:\n", df)
 
-    df_norm = normalize_data(df)
+    df_norm = normalize_data(df=df)
 
     # Plot all normalized data
     plot_data(df=df_norm, title="All Normalized Data")
