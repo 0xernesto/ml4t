@@ -31,7 +31,7 @@ def compute_daily_returns(df):
     # 2. Compute daily returns starting at index 1
     daily_returns = (df / df.shift(1)) - 1
 
-    # 3. Set the first row's returns to 0, since
+    # 3. Set the first row's daily returns to 0, since
     #    Pandas leaves the 0th row full of Nans
     daily_returns.iloc[0, :] = 0
 
